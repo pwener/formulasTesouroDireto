@@ -2,7 +2,7 @@ package github.fga.das.tdd;
 
 public class FatorJuros {
 
-	private static final Integer QUANTIDADE_MESES = 12;
+	private static final Double QUANTIDADE_MESES = 12.0;
 	private Double taxaJuros;
 	private Integer numeroMeses;
 
@@ -19,8 +19,8 @@ public class FatorJuros {
 		return numeroMeses;
 	}
 
-	public double calculaFatorJuros() {
-		Double expoente = (double) (getNumeroMeses() / QUANTIDADE_MESES);
+	public Double calculaFatorJuros() {
+		Double expoente = getNumeroMeses() / QUANTIDADE_MESES;
 		Double base = (1 + (getTaxaJuros() / 100));
 		Double calculoExponencial = Math.pow(base, expoente);
 
