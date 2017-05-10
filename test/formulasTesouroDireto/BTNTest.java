@@ -22,4 +22,11 @@ public class BTNTest {
 		btn.setTaxaReferencial(2.0);
 		assertEquals(10, btn.getPrecoUnitatio(), 0.000006);
 	}
+	
+	@Test
+	public void testSecondPrecoUnitario() {
+		btn.setPrecoUnitarioAnterior(10.0);
+		btn.setTaxaReferencial(2.0);
+		assertEquals(20, btn.getPrecoUnitatio(), 0.000006);
+	}
 }
