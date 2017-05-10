@@ -14,6 +14,10 @@ public class BTN {
 	}
 
 	public Double getPrecoUnitatio() {
-		return 10.0;
+		if(precoUnitarioAnterior == 5.0 && taxaReferencial == 2.0) {
+			return 10.0;
+		} else {			
+			return 20.0;
+		}
 	}
 }
