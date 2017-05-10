@@ -8,8 +8,11 @@ import org.junit.Test;
 import github.fga.das.tdd.BTN;
 
 public class BTNTest {
+	private static final double ERRO = 0.000001;
 	
 	private BTN btn;
+	
+	
 	
 	@Before
 	public void setUp() {
@@ -20,13 +23,19 @@ public class BTNTest {
 	public void testPrecoUnitario() {
 		btn.setPrecoUnitarioAnterior(5.0);
 		btn.setTaxaReferencial(2.0);
-		assertEquals(10, btn.getPrecoUnitatio(), 0.000001);
+		assertEquals(10, btn.getPrecoUnitatio(), ERRO);
 	}
 	
 	@Test
 	public void testSecondPrecoUnitario() {
 		btn.setPrecoUnitarioAnterior(10.0);
 		btn.setTaxaReferencial(2.0);
-		assertEquals(20, btn.getPrecoUnitatio(), 0.000001);
+		assertEquals(20, btn.getPrecoUnitatio(), ERRO);
+	}
+	
+	public void testCalculaJuros() {
+		btn.setFatorJuros(2.0);
+		btn.setPrecoUnitario(5.0);
+		assertEquals(10.0, btn.getJuros(), ERRO);
 	}
 }

@@ -4,7 +4,7 @@ public class BTN {
 
 	private Double precoUnitarioAnterior;
 	private Double taxaReferencial;
-	
+
 	public void setPrecoUnitarioAnterior(Double preco) {
 		this.precoUnitarioAnterior = preco;
 	}
@@ -13,7 +13,15 @@ public class BTN {
 		this.taxaReferencial = taxa;
 	}
 
+	public Double getPrecoUnitarioAnterior() {
+		return precoUnitarioAnterior;
+	}
+
+	public Double getTaxaReferencial() {
+		return taxaReferencial;
+	}
+
 	public Double getPrecoUnitatio() {
-		return precoUnitarioAnterior * taxaReferencial;
+		return getPrecoUnitarioAnterior() * getPrecoUnitatio();
 	}
 }
