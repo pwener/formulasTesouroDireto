@@ -20,13 +20,13 @@ public class BTNTest {
 	public void testPrecoUnitario() {
 		btn.setPrecoUnitarioAnterior(5.0);
 		btn.setTaxaReferencial(2.0);
-		assertEquals(10, btn.getPrecoUnitatio(), 0.000006);
+		assertEquals(10, btn.getPrecoUnitatio(), 0.000001);
 	}
 	
 	@Test
 	public void testSecondPrecoUnitario() {
 		btn.setPrecoUnitarioAnterior(10.0);
 		btn.setTaxaReferencial(2.0);
-		assertEquals(20, btn.getPrecoUnitatio(), 0.000006);
+		assertEquals(20, btn.getPrecoUnitatio(), 0.000001);
 	}
 }
