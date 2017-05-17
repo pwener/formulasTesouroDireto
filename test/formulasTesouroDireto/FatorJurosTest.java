@@ -14,7 +14,7 @@ import github.fga.das.tdd.FatorJuros;
 @RunWith(Parameterized.class)
 public class FatorJurosTest {
 	
-	private static final double ERRO = 0.000001;
+	private static final double ERRO = 0.0000001;
 	
 	private FatorJuros fatorJuros;
 	

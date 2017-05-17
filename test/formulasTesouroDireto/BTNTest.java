@@ -11,9 +11,7 @@ public class BTNTest {
 	private static final double ERRO = 0.000001;
 	
 	private BTN btn;
-	
-	
-	
+		
 	@Before
 	public void setUp() {
 		this.btn = new BTN();
@@ -37,8 +35,8 @@ public class BTNTest {
 	
 	@Test
 	public void testCalculaJuros() {
-		btn.setFatorJuros(2.0);
+		btn.setFatorJuros(0.1);
 		btn.setPrecoUnitario(5.0);
-		assertEquals(10.0, btn.getJuros(), ERRO);
+		assertEquals(0.5, btn.getJuros(), ERRO);
 	}
 }
