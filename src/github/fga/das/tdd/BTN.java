@@ -6,7 +6,7 @@ public class BTN {
 	private Double taxaReferencial;
 	private Double fatorJuros;
 	private double precoUnitario;
-	private FatorJuros _fatorJuros;
+	private FatorJuros _fatorJuros = new FatorJuros(10.0, 12);
 
 	public void setPrecoUnitarioAnterior(Double preco) {
 		this.precoUnitarioAnterior = preco;
@@ -41,7 +41,7 @@ public class BTN {
 	}
 
 	public Double getFatorJuros() {
-		return fatorJuros;
+		return this._fatorJuros.calculaFatorJuros();
 	}
 
 	public double getJuros() {
