@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import github.fga.das.tdd.BTN;
+import github.fga.das.tdd.FatorJuros;
 
 public class BTNTest {
 	private static final double ERRO = 0.000001;
@@ -35,7 +36,7 @@ public class BTNTest {
 	
 	@Test
 	public void testCalculaJuros() {
-		btn.setFatorJuros(0.1);
+		btn.setFatorJuros(new FatorJuros(10.0, 12));
 		btn.setPrecoUnitario(5.0);
 		assertEquals(0.5, btn.getJuros(), ERRO);
 	}
