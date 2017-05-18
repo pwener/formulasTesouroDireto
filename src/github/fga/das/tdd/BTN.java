@@ -46,5 +46,9 @@ public class BTN {
 	public double getJuros() {
 		return getPrecoUnitario() * getFatorJuros();
 	}
+	
+	public double getPrincipal() {
+		return 1.0;
+	}
 
 }
