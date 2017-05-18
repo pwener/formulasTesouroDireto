@@ -11,6 +11,7 @@ public class LFTTest {
 	
 	private LFT lft;
 	private static final double PRECISION6 = 0.000000;
+	private static final double PRECISION8 = 0.00000000;
 
 	@Before
 	public void setUp() {
@@ -34,4 +35,12 @@ public class LFTTest {
 		assertEquals(PRECISION6, lft.getVNb(), PRECISION6);
 	}
 
+	@Test
+	public void testCRounded() {
+		lft.setC(10.987654321);
+		assertEquals(10.98765432, lft.getC(), PRECISION8);
+		
+		lft.setC(10.987654327);
+		assertEquals(10.98765433, lft.getC(), PRECISION8);
+	}
 }
