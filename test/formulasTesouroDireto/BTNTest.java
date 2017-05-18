@@ -51,6 +51,6 @@ public class BTNTest {
 		btn.setPrecoUnitario(3.123456);
 		
 		double principal = btn.getPrincipal();
-		assertEquals(312.34, principal, PRECISION2);
+		assertEquals(312.35, principal, PRECISION2);
 	}
 }

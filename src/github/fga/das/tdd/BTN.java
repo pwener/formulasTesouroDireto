@@ -49,7 +49,8 @@ public class BTN {
 	}
 	
 	public double getPrincipal() {
-		return 312.34;
+		double principal = qte * precoUnitario;
+		return (double)Math.round(principal * 100d) / 100d;
 	}
 	
 	public void setQte(int qte) {
