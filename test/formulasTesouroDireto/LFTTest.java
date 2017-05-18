@@ -25,8 +25,13 @@ public class LFTTest {
 	@Test
 	public void testeVNbPrecision() {
 	 	lft.setVBn(70.987654321);
-	 	
 	 	assertEquals(lft.getVNb(), 70.987654, PRECISION6);
-	 }
+	}
+	
+	@Test
+	public void testVNbNotNegative() {
+		lft.setVBn(-34);
+		assertEquals(PRECISION6, lft.getVNb(), PRECISION6);
+	}
 
 }
