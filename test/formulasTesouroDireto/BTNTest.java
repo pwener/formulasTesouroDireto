@@ -47,11 +47,8 @@ public class BTNTest {
 	public void testPrincipal() {
 		btn.setQte(100);
 		assertEquals(100, btn.getQte());
-		
 		btn.setPrecoUnitario(3.123456);
-		
-		double principal = btn.getPrincipal();
-		assertEquals(312.35, principal, PRECISION2);
+		assertEquals(312.35, btn.getPrincipal(), PRECISION2);
 	}
 	
 	//Test if round was made right. To 2 decimal places
@@ -73,7 +70,10 @@ public class BTNTest {
 	@Test
 	public void testPrincipalWithDolar() {
 		btn.setDolar(3.321634);
-		
 		assertEquals(3.321634, btn.getDolar(), PRECISION6);
+		
+		btn.setQte(100);
+		
+		assertEquals(332.16, btn.getPrincipal(), PRECISION2);
 	}
 }
