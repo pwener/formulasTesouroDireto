@@ -12,6 +12,7 @@ public class LFTTest {
 	private LFT lft;
 	private static final double PRECISION6 = 0.000000;
 	private static final double PRECISION8 = 0.00000000;
+	private static final double PRECISION2 = 0.00;
 
 	@Before
 	public void setUp() {
@@ -45,5 +46,11 @@ public class LFTTest {
 		
 		lft.setC(10.987654327);
 		assertNotEquals(10.98765432, lft.getC(), PRECISION8);
+	}
+	
+	@Test
+	public void testSelic() {
+		lft.setSelic(3.54321);
+		assertEquals(3.54, lft.getSelic(), PRECISION2);
 	}
 }
