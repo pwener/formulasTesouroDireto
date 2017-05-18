@@ -31,4 +31,12 @@ public class HandleDecimalTest {
 		assertNotEquals(3.456,HandleDecimal.truncate(3.4567,2), PRECISION2);
 		assertNotEquals(3.46,HandleDecimal.truncate(3.4567,2), PRECISION2);
 	}
+	
+	@Test
+	public void testRoundNumber() {
+		assertEquals(3.46,HandleDecimal.round(3.4567,2), PRECISION2);
+		assertNotEquals(3.467,HandleDecimal.round(3.4567,2), PRECISION2);
+		assertNotEquals(3.45,HandleDecimal.round(3.4567,2), PRECISION2);
+		assertNotEquals(3.4,HandleDecimal.round(3.4567,2), PRECISION2);
+	}
 }
