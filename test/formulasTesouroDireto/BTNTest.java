@@ -72,8 +72,8 @@ public class BTNTest {
 	
 	@Test
 	public void testPrincipalWithDolar() {
-		btn.setDollar(3.321634);
+		btn.setDolar(3.321634);
 		
-		assertEquals(3.321634, btn.getDollar());
+		assertEquals(3.321634, btn.getDolar(), PRECISION6);
 	}
 }

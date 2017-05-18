@@ -7,6 +7,7 @@ public class BTN {
 	private double precoUnitario;
 	private FatorJuros fatorJuros;
 	private int qte;
+	private double dolar;
 
 	public void setPrecoUnitarioAnterior(Double preco) {
 		this.precoUnitarioAnterior = preco;
@@ -60,5 +61,12 @@ public class BTN {
 	public int getQte() {
 		return this.qte;
 	}
+	
+	public void setDolar(double dolar) {
+		this.dolar = dolar;
+	}
 
+	public double getDolar() {
+		return this.dolar;
+	}
 }
