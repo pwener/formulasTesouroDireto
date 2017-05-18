@@ -4,10 +4,10 @@ public class BTN {
 
 	private Double precoUnitarioAnterior;
 	private Double taxaReferencial;
-	private double precoUnitario;
+	private double precoUnitario = 0;
 	private FatorJuros fatorJuros;
 	private int qte;
-	private double dolar;
+	private double dolar = 0;
 
 	public void setPrecoUnitarioAnterior(Double preco) {
 		this.precoUnitarioAnterior = preco;
@@ -50,7 +50,14 @@ public class BTN {
 	}
 	
 	public double getPrincipal() {
-		double principal = qte * precoUnitario;
+		double principal = 0;
+		
+		if(dolar != 0) {
+			principal = qte * dolar;
+		} else if (precoUnitario != 0) {
+			principal = qte * precoUnitario;
+		}
+		
 		return (double)Math.round(principal * 100d) / 100d;
 	}
 	
