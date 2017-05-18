@@ -6,6 +6,7 @@ import java.math.RoundingMode;
 public class LFT {
 	
 	private double VNb;
+	private double C;
 	
 	public LFT() {
 		
@@ -22,5 +23,12 @@ public class LFT {
 	public double getVNb() {
 		return this.VNb;
 	}
-
+	
+	public void setC(double number) {
+		this.VNb = BigDecimal.valueOf(number).setScale(8, RoundingMode.HALF_UP).doubleValue();
+	}
+	
+	public double getC() {
+		return this.VNb;
+	}
 }
