@@ -7,6 +7,7 @@ public class LFT {
 	
 	private double VNb;
 	private double C;
+	private double selic;
 	
 	public LFT() {
 		
@@ -30,5 +31,13 @@ public class LFT {
 	
 	public double getC() {
 		return this.VNb;
+	}
+	
+	public void setSelic(double number) {
+		this.selic = BigDecimal.valueOf(number).setScale(2, RoundingMode.FLOOR).doubleValue();
+	}
+	
+	public double getSelic() {
+		return this.selic;
 	}
 }
