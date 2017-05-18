@@ -12,7 +12,11 @@ public class LFT {
 	}
 	
 	public void setVBn(double number) {
-		this.VNb = BigDecimal.valueOf(number).setScale(6, RoundingMode.FLOOR).doubleValue();
+		if (number < 0) {
+			this.VNb = 0.000000;
+		} else {
+			this.VNb = BigDecimal.valueOf(number).setScale(6, RoundingMode.FLOOR).doubleValue();
+		}
 	}
 	
 	public double getVNb() {
