@@ -46,7 +46,7 @@ public class BTNTest {
 	public void testPrincipal() {
 		btn.setQte(100);
 		
-		assertEquals(100, btn.getQte);
+		assertEquals(100, btn.getQte());
 		
 		double principal = 0;
 		principal = btn.getPrincipal();
