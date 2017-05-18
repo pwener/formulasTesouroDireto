@@ -49,7 +49,7 @@ public class BTN {
 	}
 	
 	public double getPrincipal() {
-		return 1.0;
+		return 312.34;
 	}
 	
 	public void setQte(int qte) {
