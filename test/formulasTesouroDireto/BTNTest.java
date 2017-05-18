@@ -40,4 +40,11 @@ public class BTNTest {
 		btn.setPrecoUnitario(5.0);
 		assertEquals(0.5, btn.getJuros(), ERRO);
 	}
+	
+	@Test
+	public void testPrincipal() {
+		double principal = 0;
+		principal = btn.getPrincipal();
+		assertNotEquals(0, principal);
+	}
 }
