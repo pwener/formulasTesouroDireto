@@ -53,4 +53,20 @@ public class BTNTest {
 		double principal = btn.getPrincipal();
 		assertEquals(312.35, principal, PRECISION2);
 	}
+	
+	//Test if round was made right. To 2 decimal places
+	@Test
+	public void testPrincipalRounded() {
+		btn.setQte(100);
+		btn.setPrecoUnitario(3.123456);
+		
+		// check to see if number was truncate
+		assertNotEquals(312.34, btn.getPrincipal(), PRECISION2);
+		
+		// check to see if number was rounded up. witch is the right
+		assertEquals(312.35, btn.getPrincipal(), PRECISION2);
+		
+		//check to see if number was rounded down. with is wrong
+		assertNotEquals(312.34, btn.getPrincipal(), PRECISION2);		
+	}
 }
