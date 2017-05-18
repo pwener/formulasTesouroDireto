@@ -17,7 +17,7 @@ public class LFT {
 		if (number < 0) {
 			this.VNb = 0.000000;
 		} else {
-			this.VNb = BigDecimal.valueOf(number).setScale(6, RoundingMode.FLOOR).doubleValue();
+			this.VNb = HandleDecimal.truncate(number, 6);
 		}
 	}
 	
@@ -26,7 +26,7 @@ public class LFT {
 	}
 	
 	public void setC(double number) {
-		this.VNb = BigDecimal.valueOf(number).setScale(8, RoundingMode.HALF_UP).doubleValue();
+		this.VNb = HandleDecimal.round(number, 8);
 	}
 	
 	public double getC() {
@@ -34,7 +34,7 @@ public class LFT {
 	}
 	
 	public void setSelic(double number) {
-		this.selic = BigDecimal.valueOf(number).setScale(2, RoundingMode.FLOOR).doubleValue();
+		this.selic = HandleDecimal.truncate(number, 2);
 	}
 	
 	public double getSelic() {
