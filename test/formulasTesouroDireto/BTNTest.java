@@ -9,7 +9,8 @@ import github.fga.das.tdd.BTN;
 import github.fga.das.tdd.FatorJuros;
 
 public class BTNTest {
-	private static final double ERRO = 0.000001;
+	private static final double PRECISION6 = 0.000001;
+	private static final double PRECISION2 = 0.00;
 	
 	private BTN btn;
 		
@@ -23,7 +24,7 @@ public class BTNTest {
 		btn.setPrecoUnitarioAnterior(5.0);
 		btn.setTaxaReferencial(2.0);
 		btn.calculaPrecoUnitario();
-		assertEquals(10, btn.getPrecoUnitario(), ERRO);
+		assertEquals(10, btn.getPrecoUnitario(), PRECISION6);
 	}
 	
 	@Test
@@ -31,25 +32,25 @@ public class BTNTest {
 		btn.setPrecoUnitarioAnterior(10.0);
 		btn.setTaxaReferencial(2.0);
 		btn.calculaPrecoUnitario();
-		assertEquals(20, btn.getPrecoUnitario(), ERRO);
+		assertEquals(20, btn.getPrecoUnitario(), PRECISION6);
 	}
 	
 	@Test
 	public void testCalculaJuros() {
 		btn.setFatorJuros(new FatorJuros(10.0, 12));
 		btn.setPrecoUnitario(5.0);
-		assertEquals(0.5, btn.getJuros(), ERRO);
+		assertEquals(0.5, btn.getJuros(), PRECISION6);
 	}
 
 	
 	@Test
 	public void testPrincipal() {
 		btn.setQte(100);
-		
 		assertEquals(100, btn.getQte());
 		
-		double principal = 0;
-		principal = btn.getPrincipal();
-		assertNotEquals(0, principal);
+		btn.setPrecoUnitario(3.123456);
+		
+		double principal = btn.getPrincipal();
+		assertEquals(312.34, principal, PRECISION2);
 	}
 }
