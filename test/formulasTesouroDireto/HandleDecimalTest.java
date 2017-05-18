@@ -27,5 +27,8 @@ public class HandleDecimalTest {
 	@Test
 	public void testTruncateNumber() {
 		assertEquals(3.45,HandleDecimal.truncate(3.4567,2), PRECISION2);
+		assertNotEquals(3.4,HandleDecimal.truncate(3.4567,2), PRECISION2);
+		assertNotEquals(3.456,HandleDecimal.truncate(3.4567,2), PRECISION2);
+		assertNotEquals(3.46,HandleDecimal.truncate(3.4567,2), PRECISION2);
 	}
 }
