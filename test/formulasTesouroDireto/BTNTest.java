@@ -69,4 +69,11 @@ public class BTNTest {
 		//check to see if number was rounded down. with is wrong
 		assertNotEquals(312.34, btn.getPrincipal(), PRECISION2);		
 	}
+	
+	@Test
+	public void testPrincipalWithDolar() {
+		btn.setDollar(3.321634);
+		
+		assertEquals(3.321634, btn.getDollar());
+	}
 }
