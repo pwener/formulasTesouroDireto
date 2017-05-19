@@ -1,25 +1,31 @@
 package github.fga.das.tdd.ntna;
 
 public class PUam {
-
-	public void setValorDolarA(double d) {
-		// TODO Auto-generated method stub
-		
+	
+	private Double dolarA;
+	private Double dolarB;
+	private Double valorEmissao;
+	private Double percentualAmortizacao;
+	
+	public void setDolarA(Double dolarA) {
+		this.dolarA = dolarA;
 	}
 
-	public void setValorDolarB(double d) {
-		// TODO Auto-generated method stub
-		
+	public void setDolarB(Double dolarB) {
+		this.dolarB = dolarB;
 	}
 
-	public void setValorLiquido(double d) {
-		// TODO Auto-generated method stub
-		
+	public void setValorEmissao(Double valorEmissao) {
+		this.valorEmissao = valorEmissao;
+	}
+
+	public void setPercentualAmortizacao(Double percentualAmortizacao) {
+		this.percentualAmortizacao = percentualAmortizacao;
 	}
 
 	public double calcula() {
-		// TODO Auto-generated method stub
-		return 45.0;
+		
+		return (this.dolarA/this.dolarB)*(this.valorEmissao*this.percentualAmortizacao);
 	}
 
 }

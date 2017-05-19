@@ -18,10 +18,11 @@ public class PUamTest {
 	
 	@Test
 	public void testCalcula(){
-		puam.setValorDolarA(3.2);
-		puam.setValorDolarB(3.0);
-		puam.setValorLiquido(45.00);
-		assertEquals(45.00, puam.calcula(), ERRO);
+		puam.setDolarA(3.2);
+		puam.setDolarB(3.0);
+		puam.setValorEmissao(20.0);
+		puam.setPercentualAmortizacao(0.9);
+		assertEquals(19.2, puam.calcula(), ERRO);
 	}
 
 }
