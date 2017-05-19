@@ -66,4 +66,13 @@ public class LFTTest {
 		assertEquals(0.00041421, lft.getTSelic(1), PRECISION8);
 		assertNotEquals(0.00041422, lft.getTSelic(1), PRECISION8);
 	}
+	
+	@Test
+	public void testVNa() {
+		lft.addSelicK(3.54321);
+		lft.addSelicK(4.54321);
+		lft.setVBn(60.12345678);
+		
+		assertEquals(60.142351,lft.getVNA(2), PRECISION6);
+	}
 }

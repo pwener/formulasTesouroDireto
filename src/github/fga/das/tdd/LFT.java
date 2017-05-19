@@ -51,4 +51,8 @@ public class LFT {
 	public double getTSelic(int k) {
 		return HandleDecimal.round(Math.pow((this.getSelicK(k)/100.0 + 1.0), (1.0/252.0)) - 1.0, 8);
 	}
+	
+	public double getVNA(int n) {
+		return HandleDecimal.truncate(this.getVNb()*this.getC(n), 6);
+	}
 }
