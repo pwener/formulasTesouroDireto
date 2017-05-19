@@ -39,7 +39,10 @@ public class LFTTest {
 	@Test
 	public void testC() {
 		lft.addSelicK(3.54);
-		assertEquals(1.00013806, lft.getC(1), PRECISION8);		
+		assertEquals(1.00013806, lft.getC(1), PRECISION8);
+		
+		lft.addSelicK(4.54);
+		assertEquals(1.00031428, lft.getC(2), PRECISION8);
 	}
 	
 	@Test
