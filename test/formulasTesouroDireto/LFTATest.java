@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import github.fga.das.tdd.LFT;
+import github.fga.das.tdd.LFTA;
 
 public class LFTATest {
 
