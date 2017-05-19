@@ -22,4 +22,9 @@ public class LTFB {
 	public double getSelicK(int i) {
 		return selicK.get(i-1);
 	}
+	
+	public double getTSelicK(int i) {
+		double tSelicK = Math.pow((this.getSelicK(i)/100 + 1),(1.0/252.0)) - 1;
+		return HandleDecimal.round(tSelicK, 8);
+	}
 }
