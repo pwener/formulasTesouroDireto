@@ -1,23 +1,24 @@
 package formulasTesouroDireto;
 
-import org.junit.Assert.*;
+import static org.junit.Assert.*;
+
 import org.junit.Before;
 import org.junit.Test;
 
-import github.fga.das.tdd.FatorJuros;
 import github.fga.das.tdd.FatorRendimento;
+import github.fga.das.tdd.Juros;
 import github.fga.das.tdd.VNA;
 
 public class JurosTest {
 	private static final double ERRO = 0.000001;
-	
-	private Juro juro;
-	
+
+	private Juros juro;
+
 	@Before
 	public void setUp() {
-		this.juro = new Juro();
+		this.juro = new Juros();
 	}
-	
+
 	@Test
 	public void calcula() {
 		VNA vna = new VNA();
