@@ -37,15 +37,9 @@ public class LFTTest {
 	}
 
 	@Test
-	public void testCRounded() {
-		lft.setC(10.987654321);
-		assertEquals(10.98765432, lft.getC(), PRECISION8);
-		
-		lft.setC(10.987654327);
-		assertEquals(10.98765433, lft.getC(), PRECISION8);
-		
-		lft.setC(10.987654327);
-		assertNotEquals(10.98765432, lft.getC(), PRECISION8);
+	public void testC() {
+		lft.addSelicK(3.54);
+		assertEquals(1.00013806, lft.getC(1), PRECISION8);		
 	}
 	
 	@Test
