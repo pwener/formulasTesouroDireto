@@ -20,8 +20,8 @@ public class FatorJurosTest {
 	public void calcula() {
 		juros.setNumeroMeses(6);
 		juros.setTaxaJuros(25);
-		juros.setDCP(10);
-		juros.setDCT(5);
+		juros.setDcp(10);
+		juros.setDct(5);
 		assertEquals(1.250000, juros.calcula(), ERRO);
 	}
 }
