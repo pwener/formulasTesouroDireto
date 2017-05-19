@@ -5,12 +5,12 @@ package github.fga.das.tdd;
  */
 public class VNA {
 
-	private Double fator;
+	private FatorRendimento fator;
 	private Double ipca1;
 	private Double ipca0;
 	private Double valorNominal;
 	
-	public void setFator(Double fator) {
+	public void setFator(FatorRendimento fator) {
 		this.fator = fator;
 	}
 
@@ -29,7 +29,7 @@ public class VNA {
 	public double calcula() {
 		Double quotient = ipca1/ipca0;
 
-		return fator * quotient * valorNominal;
+		return fator.calcula() * quotient * valorNominal;
 	}
 
 }
