@@ -4,9 +4,8 @@ public class PUam {
 	
 	private Double dolarA;
 	private Double dolarB;
-	private Double valorEmissao;
-	private Double percentualAmortizacao;
-	
+	private ValorLiquido valorLiquido;
+
 	public void setDolarA(Double dolarA) {
 		this.dolarA = dolarA;
 	}
@@ -14,18 +13,14 @@ public class PUam {
 	public void setDolarB(Double dolarB) {
 		this.dolarB = dolarB;
 	}
-
-	public void setValorEmissao(Double valorEmissao) {
-		this.valorEmissao = valorEmissao;
-	}
-
-	public void setPercentualAmortizacao(Double percentualAmortizacao) {
-		this.percentualAmortizacao = percentualAmortizacao;
+	
+	public void setValorLiquido(ValorLiquido valorLiquido) {
+		this.valorLiquido = valorLiquido;
 	}
 
 	public double calcula() {
 		
-		return (this.dolarA/this.dolarB)*(this.valorEmissao*this.percentualAmortizacao);
+		return (this.dolarA/this.dolarB)*(this.valorLiquido.calcula());
 	}
 
 }
