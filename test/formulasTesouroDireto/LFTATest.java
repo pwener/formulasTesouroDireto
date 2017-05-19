@@ -87,6 +87,18 @@ public class LFTATest {
 		assertEquals(10.123456, lfta.getVE(), PRECISION6);
 		assertNotEquals(10.12345678, lfta.getVE(), PRECISION6);
 	}
+	
+	@Test
+	public void testVNa() {
+		lfta.setSelicA(1.45);
+		lfta.setVE(10.123456);
+		lfta.setP(10);
+		lfta.setN(5);
+		lfta.setDu(3);
+		lfta.setDut(5);
+		
+		assertEquals(10.125191, lfta.getVNa(3),PRECISION6);
+	}
 }
 
 
