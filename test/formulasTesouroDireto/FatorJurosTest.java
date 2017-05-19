@@ -45,5 +45,4 @@ public class FatorJurosTest {
 		assertEquals(expected, fatorJuros.calculaFatorJuros(), ERRO);
 	}
 	
-	
 }
