@@ -27,12 +27,13 @@ public class LFT {
 		return this.VNb;
 	}
 	
-	public void setC(double number) {
-		this.VNb = HandleDecimal.round(number, 8);
-	}
 	
-	public double getC() {
-		return this.VNb;
+	public double getC(int n) {
+		double C = 1;
+		for(int i = 0; i< n; i++) {
+			C *= (1+this.getTSelic(i+1));
+		}
+		return HandleDecimal.round(C, 8);
 	}
 	
 	public List<Double> getSelick() {
