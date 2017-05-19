@@ -28,4 +28,12 @@ public class LFTATest {
 		assertEquals(10, lfta.getN());
 		assertNotEquals(11, lfta.getN());
 	}
+	
+	@Test
+	public void testP() {
+		lfta.setP(10);
+
+		assertEquals(10, lfta.getP());
+		assertNotEquals(5, lfta.getP());
+	}
 }
