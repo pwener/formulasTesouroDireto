@@ -17,7 +17,15 @@ public class LFTATest {
 	}
 	
 	@Test
-	public void test() {
+	public void testNotNUll() {
 		assertNotNull(lfta);
+	}
+	
+	@Test
+	public void testN() {
+		lfta.setN(10);
+		
+		assertEquals(10, lfta.getN());
+		assertNotEquals(11, lfta.getN());
 	}
 }
