@@ -24,8 +24,9 @@ public class FatorRendimento {
 	}
 
 	public double calcula() {
-		return 0;
+		Double ipcaQuociente = ipca1/ipca0;
+		Double numeroDiasQuociente = (double) (diasCorridos/diasCorridosEmQuinzena);
+
+		return Math.pow(ipcaQuociente, numeroDiasQuociente);
 	}
-
-
 }
