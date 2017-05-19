@@ -1,23 +1,24 @@
 package formulasTesouroDireto;
 
-import org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Before;
 import org.junit.Test;
 
-import github.fga.das.tdd.BTN;
+import github.fga.das.tdd.LTN;
 
 public class LTNTest {
 
-	LTN ltn;
-	
+	private LTN ltn;
+
 	@Before
 	public void setUp() {
 		this.ltn = new LTN();
 	}
-	
+
 	@Test
 	public void testCalculaPrecoUnitario() {
-		ltn.setTaxaIndicativa();
+		ltn.setTaxaIndicativa(0.01);
 		assertEquals(997.253195, ltn.calculaPrecoUnitario(), 0.000001);
 	}
 }
