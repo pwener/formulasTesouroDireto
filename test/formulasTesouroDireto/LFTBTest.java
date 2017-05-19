@@ -12,6 +12,7 @@ public class LFTBTest {
 	private LTFB ltfb;
 	private static final double PRECISION2 = 0.00;
 	private static final double PRECISION8 = 0.00000000;
+	private static final double PRECISION6 = 0.000000; 
 
 	@Before
 	public void setUp() {
@@ -55,7 +56,7 @@ public class LFTBTest {
 	@Test
 	public void testVnb() {
 		ltfb.setVnb(3.12345678);
-		assertEquals(3.123456, ltfb.getVnb());
+		assertEquals(3.123456, ltfb.getVnb(), PRECISION6);
 	}
 
 }

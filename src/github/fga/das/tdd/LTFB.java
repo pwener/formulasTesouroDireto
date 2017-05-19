@@ -6,7 +6,16 @@ import java.util.List;
 public class LTFB {
 	
 	private List<Double> selicK;
+	private double vnb;
 	
+	public double getVnb() {
+		return vnb;
+	}
+
+	public void setVnb(double vnb) {
+		this.vnb = HandleDecimal.truncate(vnb, 6);
+	}
+
 	public LTFB() {
 		selicK = new ArrayList<>();
 	}
@@ -36,4 +45,6 @@ public class LTFB {
 		
 		return HandleDecimal.round(C, 8);
 	}
+	
+	
 }
