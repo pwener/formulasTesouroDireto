@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import github.fga.das.tdd.LFTA;
+import github.fga.das.tdd.LTFB;
 
 public class LFTBTest {
 	
@@ -13,12 +13,12 @@ public class LFTBTest {
 
 	@Before
 	public void setUp() {
-		lftb = new LFTB();
+		ltfb = new LTFB();
 	}
 	
 	@Test
 	public void testNotNUll() {
-		assertNotNull(lftb);
+		assertNotNull(ltfb);
 	}
 
 }
