@@ -40,4 +40,9 @@ public class LFT {
 	public double getSelic() {
 		return this.selic;
 	}
+	
+	public double getTSelic() {
+		return 0.00041421;
+	}
+
 }
