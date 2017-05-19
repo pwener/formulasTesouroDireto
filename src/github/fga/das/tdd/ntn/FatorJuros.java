@@ -1,6 +1,7 @@
 package github.fga.das.tdd.ntn;
 
 public class FatorJuros {
+	private static final Double QUANTIDADE_MESES = 12.0;
 
 	private int numeroMeses;
 	private int taxaJuros;
@@ -40,7 +41,10 @@ public class FatorJuros {
 	}
 
 	public Double calcula() {
-		return 0.0;
+		Double fatorInterno = (double)(getTaxaJuros()/100.0) + 1.0;
+		Double primeiraPotencia = Math.pow(fatorInterno, (double)getNumeroMeses()/QUANTIDADE_MESES);
+		Double resultadoFinal = Math.pow(primeiraPotencia, (double)getDcp()/getDct());
+		return resultadoFinal;
 	}
 
 }

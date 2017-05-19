@@ -22,6 +22,6 @@ public class FatorJurosTest {
 		juros.setTaxaJuros(25);
 		juros.setDcp(10);
 		juros.setDct(5);
-		assertEquals(1.250000, juros.calcula(), ERRO);
+		assertEquals(1.25, juros.calcula(), ERRO);
 	}
 }
