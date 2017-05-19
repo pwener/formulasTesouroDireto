@@ -51,5 +51,11 @@ public class LFTBTest {
 		
 		assertEquals(1.00030589, ltfb.getC(2), PRECISION8);
 	}
+	
+	@Test
+	public void testVnb() {
+		ltfb.setVnb(3.12345678);
+		assertEquals(3.123456, ltfb.getVnb());
+	}
 
 }
