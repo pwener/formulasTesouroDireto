@@ -72,6 +72,13 @@ public class LFTATest {
 		lfta.setSelicA(1.45);
 		assertEquals(0.00005713,lfta.getTSelicD(), PRECISION8);
 	}
+	
+	@Test
+	public void testC() {
+		lfta.setSelicA(1.45);
+		assertEquals(1.00017140, lfta.getC(3), PRECISION8);
+	}
 }
+
 
 
