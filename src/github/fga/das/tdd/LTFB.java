@@ -46,5 +46,9 @@ public class LTFB {
 		return HandleDecimal.round(C, 8);
 	}
 	
+	public double getVna(int n) {
+		return HandleDecimal.truncate(this.getC(n)*this.getVnb(), 6);
+	}
+	
 	
 }
