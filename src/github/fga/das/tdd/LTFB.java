@@ -27,4 +27,13 @@ public class LTFB {
 		double tSelicK = Math.pow((this.getSelicK(i)/100 + 1),(1.0/252.0)) - 1;
 		return HandleDecimal.round(tSelicK, 8);
 	}
+	
+	public double getC(int n) {
+		double C =1;
+		for(int i =0; i< n; i++) {
+			C *= (1 + this.getTSelicK(i+1));
+		}
+		
+		return HandleDecimal.round(C, 8);
+	}
 }
