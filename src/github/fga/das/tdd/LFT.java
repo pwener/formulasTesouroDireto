@@ -42,7 +42,7 @@ public class LFT {
 	}
 	
 	public double getTSelic() {
-		return 0.00041421;
+		return HandleDecimal.round(Math.pow((this.getSelic()/100.0 + 1.0), (1.0/252.0)) - 1.0, 8);
 	}
 
 }

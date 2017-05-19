@@ -58,5 +58,6 @@ public class LFTTest {
 	public void testTSelic() {
 		lft.setSelic(11.0);
 		assertEquals(0.00041421, lft.getTSelic(), PRECISION8);
+		assertNotEquals(0.00041422, lft.getTSelic(), PRECISION8);
 	}
 }
