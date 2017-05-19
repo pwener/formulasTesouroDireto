@@ -19,6 +19,6 @@ public class LTNTest {
 	@Test
 	public void testCalculaPrecoUnitario() {
 		ltn.setTaxaIndicativa(0.01);
-		assertEquals(997.253195, ltn.calculaPrecoUnitario(), 0.000001);
+		assertEquals(999.960515, ltn.calculaPrecoUnitario(), 0.000001);
 	}
 }
