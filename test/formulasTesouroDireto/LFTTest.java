@@ -49,9 +49,18 @@ public class LFTTest {
 	}
 	
 	@Test
+	public void testSelicKNotNull() {
+		assertNotNull(lft.getSelick());
+	}
+	
+	@Test
 	public void testSelic() {
-		lft.setSelic(3.54321);
-		assertEquals(3.54, lft.getSelic(), PRECISION2);
+		lft.addSelicK(3.54321);
+		lft.addSelicK(4.54321);
+		lft.addSelicK(5.54321);
+		assertEquals(3.54, lft.getSelicK(1), PRECISION2);
+		assertEquals(4.54, lft.getSelicK(2), PRECISION2);
+		assertEquals(5.54, lft.getSelicK(3), PRECISION2);
 	}
 	
 	@Test

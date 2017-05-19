@@ -44,5 +44,4 @@ public class LFT {
 	public double getTSelic() {
 		return HandleDecimal.round(Math.pow((this.getSelic()/100.0 + 1.0), (1.0/252.0)) - 1.0, 8);
 	}
-
 }
