@@ -1,4 +1,4 @@
-package formulasTesouroDireto;
+package github.fga.das.tdd.BTN;
 
 import static org.junit.Assert.assertEquals;
 
@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-import github.fga.das.tdd.FatorJuros;
+import github.fga.das.tdd.BTN.FatorJuros;
 
 @RunWith(Parameterized.class)
 public class FatorJurosTest {

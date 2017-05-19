@@ -1,4 +1,6 @@
-package github.fga.das.tdd;
+package github.fga.das.tdd.LFT;
+
+import github.fga.das.tdd.HandleDecimal;
 
 public class LFTA {
 	private int N;

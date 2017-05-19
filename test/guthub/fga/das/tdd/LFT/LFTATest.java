@@ -1,11 +1,11 @@
-package formulasTesouroDireto;
+package guthub.fga.das.tdd.LFT;
 
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import github.fga.das.tdd.LFTA;
+import github.fga.das.tdd.LFT.LFTA;
 
 public class LFTATest {
 

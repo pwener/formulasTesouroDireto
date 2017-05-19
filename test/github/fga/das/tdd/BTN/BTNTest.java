@@ -1,12 +1,11 @@
-package formulasTesouroDireto;
+package github.fga.das.tdd.BTN;
 
 import static org.junit.Assert.*;
-
 import org.junit.Before;
 import org.junit.Test;
 
-import github.fga.das.tdd.BTN;
-import github.fga.das.tdd.FatorJuros;
+import github.fga.das.tdd.BTN.FatorJuros;
+import github.fga.das.tdd.BTN.BTN;
 
 public class BTNTest {
 	private static final double PRECISION6 = 0.000001;

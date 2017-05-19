@@ -1,9 +1,12 @@
-package github.fga.das.tdd;
+package github.fga.das.tdd.LFT;
 
 import java.math.BigDecimal;
+
 import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
+
+import github.fga.das.tdd.HandleDecimal;
 
 public class LFT {
 	
