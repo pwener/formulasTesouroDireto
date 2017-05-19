@@ -5,11 +5,8 @@ public class ValorLiquido {
 	private Double valorEmissao;
 	private Double percentualAmortizacao;
 	
-	public void setValorEmissao(Double valorEmissao) {
+	public ValorLiquido(Double valorEmissao, Double percentualAmortizacao){
 		this.valorEmissao = valorEmissao;
-	}
-
-	public void setPercentualAmortizacao(Double percentualAmortizacao) {
 		this.percentualAmortizacao = percentualAmortizacao;
 	}
 
