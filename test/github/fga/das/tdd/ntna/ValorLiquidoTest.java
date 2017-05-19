@@ -13,13 +13,11 @@ public class ValorLiquidoTest {
 	
 	@Before
 	public void setUp() {
-		this.valorLiquido = new ValorLiquido();
+		this.valorLiquido = new ValorLiquido(20.0,0.9);
 	}
 	
 	@Test
 	public void testCalcula(){
-		valorLiquido.setValorEmissao(20.0);
-		valorLiquido.setPercentualAmortizacao(0.9);
 		assertEquals(18.0, valorLiquido.calcula(), ERRO);
 	}
 
