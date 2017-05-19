@@ -74,4 +74,12 @@ public class LFTA {
 		
 		return HandleDecimal.round(c, 8);
 	}
+	
+	public double getVNa(int n) {
+		double part1 = this.getC(n) * this.getVE() * Math.pow((1 + tac/100), Du/Dut);
+		double part2 = this.getC(n) * this.getVE() * Math.pow((1 + tac), Du/Dut);
+		double part3 = 1/(P - N);
+		
+		return HandleDecimal.truncate(part1-part2*part3, 6);
+	}
 }
