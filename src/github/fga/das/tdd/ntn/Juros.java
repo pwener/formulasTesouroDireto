@@ -1,4 +1,4 @@
-package github.fga.das.tdd;
+package github.fga.das.tdd.ntn;
 
 public class Juros {
 

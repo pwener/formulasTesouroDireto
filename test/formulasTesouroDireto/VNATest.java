@@ -5,8 +5,8 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import github.fga.das.tdd.FatorRendimento;
-import github.fga.das.tdd.VNA;
+import github.fga.das.tdd.ntn.FatorRendimento;
+import github.fga.das.tdd.ntn.VNA;
 
 public class VNATest {
 	private static final double ERRO = 0.00001;

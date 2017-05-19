@@ -5,9 +5,9 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import github.fga.das.tdd.FatorRendimento;
-import github.fga.das.tdd.Juros;
-import github.fga.das.tdd.VNA;
+import github.fga.das.tdd.ntn.FatorRendimento;
+import github.fga.das.tdd.ntn.Juros;
+import github.fga.das.tdd.ntn.VNA;
 
 public class JurosTest {
 	private static final double ERRO = 0.000001;

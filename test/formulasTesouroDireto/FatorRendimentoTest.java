@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-import github.fga.das.tdd.FatorRendimento;
+import github.fga.das.tdd.ntn.FatorRendimento;
 
 @RunWith(Parameterized.class)
 public class FatorRendimentoTest {
