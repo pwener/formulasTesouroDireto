@@ -11,6 +11,8 @@ public class LFTATest {
 
 	private LFTA lfta;
 	private static final double PRECISION4 = 0.0000;
+	private static final double PRECISION2 = 0.00;
+	private static final double PRECISION8 = 0.00000000;
 	
 	@Before
 	public void setUp() {
@@ -58,4 +60,18 @@ public class LFTATest {
 	public void testTac() {
 		assertEquals(0.0245, lfta.getTac(), PRECISION4);
 	}
+	
+	@Test
+	public void testSelicA() {
+		lfta.setSelicA(1.45);
+		assertEquals(1.45,lfta.getSelicA(), PRECISION2);
+	}
+	
+	@Test
+	public void testTSelicD() {
+		lfta.setSelicA(1.45);
+		assertEquals(0.00005713,lfta.getTSelicD(), PRECISION8);
+	}
 }
+
+
