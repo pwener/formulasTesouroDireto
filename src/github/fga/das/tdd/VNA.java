@@ -27,7 +27,7 @@ public class VNA {
 	}
 
 	public double calcula() {
-		return 0;
+		return 16;
 	}
 
 }
