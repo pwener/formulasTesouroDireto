@@ -2,15 +2,17 @@ package github.fga.das.tdd;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.ArrayList;
+import java.util.List;
 
 public class LFT {
 	
 	private double VNb;
 	private double C;
-	private double selic;
+	private List<Double> selicK;
 	
 	public LFT() {
-		
+		selicK = new ArrayList<>();
 	}
 	
 	public void setVBn(double number) {
@@ -25,19 +27,28 @@ public class LFT {
 		return this.VNb;
 	}
 	
-	public void setC(double number) {
-		this.VNb = HandleDecimal.round(number, 8);
+	
+	public double getC(int n) {
+		double C = 1;
+		for(int i = 0; i< n; i++) {
+			C *= (1+this.getTSelic(i+1));
+		}
+		return HandleDecimal.round(C, 8);
 	}
 	
-	public double getC() {
-		return this.VNb;
+	public List<Double> getSelick() {
+		return this.selicK;
 	}
 	
-	public void setSelic(double number) {
-		this.selic = HandleDecimal.truncate(number, 2);
+	public double getSelicK(int i) {
+		return this.selicK.get(i-1);
 	}
 	
-	public double getSelic() {
-		return this.selic;
+	public void addSelicK(double selic) {
+		this.selicK.add(HandleDecimal.truncate(selic, 2));
+	}
+
+	public double getTSelic(int k) {
+		return HandleDecimal.round(Math.pow((this.getSelicK(k)/100.0 + 1.0), (1.0/252.0)) - 1.0, 8);
 	}
 }

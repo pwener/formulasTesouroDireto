@@ -37,26 +37,33 @@ public class LFTTest {
 	}
 
 	@Test
-	public void testCRounded() {
-		lft.setC(10.987654321);
-		assertEquals(10.98765432, lft.getC(), PRECISION8);
+	public void testC() {
+		lft.addSelicK(3.54);
+		assertEquals(1.00013806, lft.getC(1), PRECISION8);
 		
-		lft.setC(10.987654327);
-		assertEquals(10.98765433, lft.getC(), PRECISION8);
-		
-		lft.setC(10.987654327);
-		assertNotEquals(10.98765432, lft.getC(), PRECISION8);
+		lft.addSelicK(4.54);
+		assertEquals(1.00031428, lft.getC(2), PRECISION8);
+	}
+	
+	@Test
+	public void testSelicKNotNull() {
+		assertNotNull(lft.getSelick());
 	}
 	
 	@Test
 	public void testSelic() {
-		lft.setSelic(3.54321);
-		assertEquals(3.54, lft.getSelic(), PRECISION2);
+		lft.addSelicK(3.54321);
+		lft.addSelicK(4.54321);
+		lft.addSelicK(5.54321);
+		assertEquals(3.54, lft.getSelicK(1), PRECISION2);
+		assertEquals(4.54, lft.getSelicK(2), PRECISION2);
+		assertEquals(5.54, lft.getSelicK(3), PRECISION2);
 	}
 	
 	@Test
 	public void testTSelic() {
-		lft.setSelic(11.0);
-		assertEquals(0.00041421, lft.getTSelic(), PRECISION8);
+		lft.addSelicK(11.0);
+		assertEquals(0.00041421, lft.getTSelic(1), PRECISION8);
+		assertNotEquals(0.00041422, lft.getTSelic(1), PRECISION8);
 	}
 }
