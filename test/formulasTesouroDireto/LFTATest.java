@@ -10,6 +10,7 @@ import github.fga.das.tdd.LFTA;
 public class LFTATest {
 
 	private LFTA lfta;
+	private static final double PRECISION4 = 0.0000;
 	
 	@Before
 	public void setUp() {
@@ -51,5 +52,10 @@ public class LFTATest {
 		
 		assertEquals(10, lfta.getDu());
 		assertNotEquals(5, lfta.getDu());
+	}
+	
+	@Test
+	public void testTac() {
+		assertEquals(0.0245, lfta.getTac(), PRECISION4);
 	}
 }
