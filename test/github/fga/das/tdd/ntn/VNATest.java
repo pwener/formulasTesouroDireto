@@ -1,4 +1,4 @@
-package formulasTesouroDireto;
+package github.fga.das.tdd.ntn;
 
 import static org.junit.Assert.*;
 
