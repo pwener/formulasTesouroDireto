@@ -58,5 +58,14 @@ public class LFTBTest {
 		ltfb.setVnb(3.12345678);
 		assertEquals(3.123456, ltfb.getVnb(), PRECISION6);
 	}
+	
+	@Test
+	public void testVna() {
+		ltfb.setVnb(3.12345678);
+		ltfb.addSelicK(3.43);
+		ltfb.addSelicK(4.43);
+		
+		assertEquals(3.124411,ltfb.getVna(2),PRECISION6);
+	}
 
 }
