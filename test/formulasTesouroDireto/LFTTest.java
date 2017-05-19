@@ -75,4 +75,12 @@ public class LFTTest {
 		
 		assertEquals(60.142351,lft.getVNA(2), PRECISION6);
 	}
+	
+	@Test(expected=IndexOutOfBoundsException.class)
+	public void testSelicKOutOfBounds() {
+		lft.addSelicK(3.54321);
+		lft.addSelicK(3.54321);
+		
+		lft.getSelicK(3);
+	}
 }
