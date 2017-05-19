@@ -18,9 +18,13 @@ public class JurosTest {
 	
 	@Test
 	public void testCalcula(){
-		juros.setPUam(10);
-		juros.setFatorJuros(3.0);
-		assertEquals(30.0, juros.calcula(), ERRO);
+		PUam puam = new PUam();
+		puam.setDolarA(3.2);
+		puam.setDolarB(3.0);
+		puam.setValorLiquido(new ValorLiquido(20.0,0.9));
+		juros.setPuam(puam);
+		juros.setFatorJuros(0.2);
+		assertEquals(3.84, juros.calcula(), ERRO);
 	}
 
 }
