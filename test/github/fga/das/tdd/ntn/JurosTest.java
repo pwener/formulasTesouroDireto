@@ -26,9 +26,20 @@ public class JurosTest {
 		vna.setIPCA0(0.5);
 		vna.setIPCA1(0.8);
 		vna.setValorNominal(2.0);
+		
 		// calcula retorna 16
 		juro.setVNA(vna);
-		juro.setFatorJuros(1.2);
-		assertEquals(3.199999, juro.calcula(), ERRO);
+		juro.setFatorJuros(getFatorJuros());
+		
+		assertEquals(4, juro.calcula(), ERRO);
+	}
+
+	private FatorJuros getFatorJuros() {
+		FatorJuros fatorJuros = new FatorJuros();
+		fatorJuros.setNumeroMeses(6);
+		fatorJuros.setTaxaJuros(25);
+		fatorJuros.setDcp(10);
+		fatorJuros.setDct(5);
+		return fatorJuros;
 	}
 }
