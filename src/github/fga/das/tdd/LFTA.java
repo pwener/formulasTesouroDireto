@@ -7,7 +7,16 @@ public class LFTA {
 	private int Dut;
 	private double selicA;
 	private static final double tac = 0.0245; 
+	private double VE;
 	
+	public double getVE() {
+		return VE;
+	}
+
+	public void setVE(double vE) {
+		VE = HandleDecimal.truncate(vE, 6);
+	}
+
 	public void setN(int N) {
 		this.N = N;
 	}
@@ -65,6 +74,4 @@ public class LFTA {
 		
 		return HandleDecimal.round(c, 8);
 	}
-	
-	
 }
