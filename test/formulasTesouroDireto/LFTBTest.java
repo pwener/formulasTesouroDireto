@@ -43,5 +43,13 @@ public class LFTBTest {
 		assertEquals(0.00017203, ltfb.getTSelicK(2),PRECISION8);
 		assertEquals(0.00020985, ltfb.getTSelicK(3),PRECISION8);
 	}
+	
+	@Test
+	public void testGetC() {
+		ltfb.addSelicK(3.43);
+		ltfb.addSelicK(4.43);
+		
+		assertEquals(1.00030589, ltfb.getC(2), PRECISION8);
+	}
 
 }
