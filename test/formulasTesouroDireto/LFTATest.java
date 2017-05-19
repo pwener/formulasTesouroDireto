@@ -36,4 +36,20 @@ public class LFTATest {
 		assertEquals(10, lfta.getP());
 		assertNotEquals(5, lfta.getP());
 	}
+	
+	@Test
+	public void testDut() {
+		lfta.setDut(10);
+		
+		assertEquals(10, lfta.getDut());
+		assertNotEquals(5, lfta.getDut());
+	}
+	
+	@Test
+	public void testDu() {
+		lfta.setDu(10);
+		
+		assertEquals(10, lfta.getDu());
+		assertNotEquals(5, lfta.getDu());
+	}
 }
