@@ -27,7 +27,9 @@ public class VNA {
 	}
 
 	public double calcula() {
-		return 16;
+		Double quotient = ipca1/ipca0;
+
+		return fator * quotient * valorNominal;
 	}
 
 }
