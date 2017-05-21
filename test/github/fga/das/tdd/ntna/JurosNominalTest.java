@@ -18,8 +18,11 @@ public class JurosNominalTest {
 	
 	@Test
 	public void testCalcula(){
-		jurosNominal.setValorNominal(2.0);
+		ValorNominal valorNominal = new ValorNominal();
+		valorNominal.setDolarA(3.2);
+		valorNominal.setDolarB(3.0);
+		jurosNominal.setValorNominal(valorNominal);
 		jurosNominal.setFatorJurosNominal(0.1);
-		assertEquals(0.2, jurosNominal.calcula(), ERRO);
+		assertEquals(106.66666, jurosNominal.calcula(), ERRO);
 	}
 }
