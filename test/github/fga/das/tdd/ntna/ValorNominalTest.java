@@ -20,7 +20,7 @@ public class ValorNominalTest {
 	public void testCalcula(){
 		valorNominal.setDolarA(3.2);
 		valorNominal.setDolarB(3.0);
-		assertEquals(1066.666, valorNominal.calcula(), ERRO);
+		assertEquals(1066.666666, valorNominal.calcula(), ERRO);
 	}
 
 }
