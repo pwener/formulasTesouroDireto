@@ -5,7 +5,6 @@ public class Juros {
 	private PUam puam;
 	private Double fatorJuros;
 	
-	
 	public void setPuam(PUam puam) {
 		this.puam = puam;
 	}
