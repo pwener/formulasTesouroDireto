@@ -13,7 +13,7 @@ public class ValorNominalAtualizadoTest {
 	
 	@Before
 	public void setUp() {
-		this.valorNominalAtualizado = new JurosNominal();
+		this.valorNominalAtualizado = new ValorNominalAtualizado();
 	}
 	
 	@Test
