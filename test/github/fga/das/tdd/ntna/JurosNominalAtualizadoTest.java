@@ -18,9 +18,13 @@ public class JurosNominalAtualizadoTest {
 	
 	@Test
 	public void testCalcula(){
+		ValorNominalAtualizado valorNominalAtualizado = new ValorNominalAtualizado();
+		valorNominalAtualizado.setDolarA(3.2);
+		valorNominalAtualizado.setDolarB(3.0);
+		valorNominalAtualizado.setValorEmissao(500.0);
+		jurosNominalAtualizado.setValorNominalAtualizado(valorNominalAtualizado);
 		jurosNominalAtualizado.setFatorJurosNominalAtualizado(3.2);
-		jurosNominalAtualizado.setValorNominalAtualizado(3.0);
-		assertEquals(533.33333, jurosNominalAtualizado.calcula(), ERRO);
+		assertEquals(1706.66666, jurosNominalAtualizado.calcula(), ERRO);
 	}
 
 }
