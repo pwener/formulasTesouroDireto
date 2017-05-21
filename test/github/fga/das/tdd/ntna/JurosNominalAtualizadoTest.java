@@ -23,8 +23,8 @@ public class JurosNominalAtualizadoTest {
 		valorNominalAtualizado.setDolarB(3.0);
 		valorNominalAtualizado.setValorEmissao(500.0);
 		jurosNominalAtualizado.setValorNominalAtualizado(valorNominalAtualizado);
-		jurosNominalAtualizado.setFatorJurosNominalAtualizado(3.2);
-		assertEquals(1706.66666, jurosNominalAtualizado.calcula(), ERRO);
+		jurosNominalAtualizado.setFatorJuros(new FatorJuros(3.2,3.0,6.0));
+		assertEquals(0.0177777, jurosNominalAtualizado.calcula(), ERRO);
 	}
 
 }
