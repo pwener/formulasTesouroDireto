@@ -23,8 +23,8 @@ public class JurosTest {
 		puam.setDolarB(3.0);
 		puam.setValorLiquido(new ValorLiquido(20.0,0.9));
 		juros.setPuam(puam);
-		juros.setFatorJuros(0.2);
-		assertEquals(3.84, juros.calcula(), ERRO);
+		juros.setFatorJuros(new FatorJuros(210.0,200.0,10.0));
+		assertEquals(0.0533333, juros.calcula(), ERRO);
 	}
 
 }
