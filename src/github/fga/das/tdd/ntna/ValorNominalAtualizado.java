@@ -19,7 +19,7 @@ public class ValorNominalAtualizado {
 	}
 
 	public double calcula() {
-		return 533.33333;
+		return (this.dolarA/this.dolarB)*this.valorEmissao;
 	}
 
 }
