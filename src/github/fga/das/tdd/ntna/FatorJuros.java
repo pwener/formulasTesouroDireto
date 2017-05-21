@@ -5,6 +5,12 @@ public class FatorJuros {
 	public Double dtp;
 	public Double dtup;
 	public Double taxaJuros;
+	
+	public FatorJuros (Double dtp, Double dtup, Double taxaJuros){
+		this.setDtp(dtp);
+		this.setDtup(dtup);
+		this.setTaxaJuros(taxaJuros);
+	}
 
 	public void setDtp(Double dtp) {
 		this.dtp = dtp;
