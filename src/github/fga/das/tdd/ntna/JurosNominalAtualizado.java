@@ -2,11 +2,11 @@ package github.fga.das.tdd.ntna;
 
 public class JurosNominalAtualizado {
 	
-	public Double fatorJurosNominalAtualizado;
+	public FatorJuros fatorJuros;
 	public ValorNominalAtualizado valorNominalAtualizado;
 	
-	public void setFatorJurosNominalAtualizado(Double fatorJurosNominalAtualizado) {
-		this.fatorJurosNominalAtualizado = fatorJurosNominalAtualizado;
+	public void setFatorJuros(FatorJuros fatorJuros) {
+		this.fatorJuros = fatorJuros;
 	}
 
 	public void setValorNominalAtualizado(ValorNominalAtualizado valorNominalAtualizado) {
@@ -14,7 +14,7 @@ public class JurosNominalAtualizado {
 	}
 
 	public double calcula() {
-		return this.valorNominalAtualizado.calcula()*this.fatorJurosNominalAtualizado;
+		return this.valorNominalAtualizado.calcula()*this.fatorJuros.calcula();
 	}
 	
 
