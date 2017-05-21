@@ -14,7 +14,7 @@ public class FatorJurosNominal {
 	}
 
 	public double calcula() {
-		return 0.05;
+		return (this.taxaJuros/100.0)*(this.numeroMeses/12.0);
 	}
 
 }
