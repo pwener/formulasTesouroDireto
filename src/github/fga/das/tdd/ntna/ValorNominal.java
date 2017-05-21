@@ -16,7 +16,7 @@ public class ValorNominal {
 	}
 
 	public double calcula() {
-		return 1066.666;
+		return (this.dolarA/this.dolarB)*1000.0;
 	}
 
 }
