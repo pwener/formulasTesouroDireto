@@ -2,10 +2,10 @@ package github.fga.das.tdd.ntna;
 
 public class JurosNominal {
 	
-	public Double valorNominal;
+	public ValorNominal valorNominal;
 	public Double fatorJurosNominal;
 	
-	public void setValorNominal(Double valorNominal) {
+	public void setValorNominal(ValorNominal valorNominal) {
 		this.valorNominal = valorNominal;
 	}
 
@@ -14,7 +14,7 @@ public class JurosNominal {
 	}
 
 	public double calcula() {
-		return 0.2;
+		return this.valorNominal.calcula()*this.fatorJurosNominal;
 	}
 
 }
