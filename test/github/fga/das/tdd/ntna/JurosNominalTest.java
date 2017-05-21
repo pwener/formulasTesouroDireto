@@ -22,7 +22,7 @@ public class JurosNominalTest {
 		valorNominal.setDolarA(3.2);
 		valorNominal.setDolarB(3.0);
 		jurosNominal.setValorNominal(valorNominal);
-		jurosNominal.setFatorJurosNominal(0.1);
-		assertEquals(106.66666, jurosNominal.calcula(), ERRO);
+		jurosNominal.setFatorJurosNominal(new FatorJurosNominal(10.0,6));
+		assertEquals(53.33333, jurosNominal.calcula(), ERRO);
 	}
 }
