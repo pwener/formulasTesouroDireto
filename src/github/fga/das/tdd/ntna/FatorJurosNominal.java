@@ -5,6 +5,11 @@ public class FatorJurosNominal {
 	public Double taxaJuros;
 	public Integer numeroMeses;
 	
+	public FatorJurosNominal(Double taxaJuros, Integer numeroMeses) {
+		this.setTaxaJuros(taxaJuros);
+		this.setNumeroMeses(numeroMeses);
+	}
+
 	public void setTaxaJuros(Double taxaJuros) {
 		this.taxaJuros = taxaJuros;
 	}
